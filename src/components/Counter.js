@@ -14,11 +14,13 @@ export default class Counter extends React.Component {
         this.setState({counter: this.state.counter - 1});
     }
     render() {
+        const { counter } = this.state;
+        const { name } = this.props;
         return(
             <div className='counter-box'>
                 <button onClick={this.increment}> plus </button>
                 <span className= {this.state.counter < 0 ? 'counter-box--warning' : ''}>
-                    {this.state.counter}
+                    {name} {counter}
                 </span>
                 <button onClick={this.decrement}> minus </button>
             </div>

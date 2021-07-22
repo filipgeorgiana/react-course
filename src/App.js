@@ -1,11 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
 import Counter from './components/Counter';
+
+const items  = ['banana', 'apple', 'orange'];
 
 function App() {
   return (
     <div className="App">
-      <Counter/>
+        {items.map((item, index) =>
+      <Counter name={item} key={index}/>)}
     </div>
   );
 }
