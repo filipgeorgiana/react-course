@@ -15,9 +15,11 @@ export default class Counter extends React.Component {
     }
     render() {
         return(
-            <div className=".counter-box">
+            <div className='counter-box'>
                 <button onClick={this.increment}> plus </button>
-                {this.state.counter}
+                <span className= {this.state.counter < 0 ? 'counter-box--warning' : ''}>
+                    {this.state.counter}
+                </span>
                 <button onClick={this.decrement}> minus </button>
             </div>
         )
