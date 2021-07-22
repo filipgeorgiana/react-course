@@ -1,13 +1,12 @@
 import './App.css';
-import Counter from './components/Counter';
-
-const items  = ['banana', 'apple', 'orange'];
+import jobs from './data/jobs';
+import List from './components/List';
+import JobListElement from "./components/JobListElement";
 
 function App() {
   return (
     <div className="App">
-        {items.map((item, index) =>
-      <Counter name={item} key={index}/>)}
+      <List items={jobs} itemElement={JobListElement}/>
     </div>
   );
 }
