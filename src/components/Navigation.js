@@ -12,6 +12,7 @@ const NavigationList = styled.ul`
 const NavigationItem = styled.li`
     margin: 12px 24px;
     ${props => props.grow ? `flex-grow: ${props.grow}`:''};
+    color: ${props => props.theme.colors.text};
 `;
 
 const Input = styled.input`
