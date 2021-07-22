@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Navigation from "./components/Navigation";
 
 const Body = styled.div`
     padding: 20px;
@@ -49,8 +50,24 @@ const SecondaryButton = styled(Button)`
     }
 `;
 
+const Box = styled.div`
+    margin: 12px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+`;
+
+const Item = styled.div`
+    padding: 12px;
+    margin: 12px;
+    height: 32 px;
+    border: 1px solid blue;
+    flex: ${props => props.flex || 1};
+`;
+
 export default () =>
     <Body>
+        <Navigation/>
         <Heading> Heei!! </Heading>
         <Paragraph>
             This is a paragraph of text
@@ -61,4 +78,11 @@ export default () =>
         <SecondaryButton primary={false}>
             Learn more !
         </SecondaryButton>
+        <Box>
+            <Item/>
+            <Item/>
+            <Item flex={10}/>
+            <Item/>
+            <Item/>
+        </Box>
     </Body>
