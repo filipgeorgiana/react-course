@@ -1,0 +1,8 @@
+.counter-box {
+    font-size: 30px;
+    padding: 1em;
+}
+
+.counter-box--warning {
+    color: crimson;
+}
