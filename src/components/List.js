@@ -1,16 +1,17 @@
 import React, { Component } from "react";
 import './JobListElement.css';
+import jobs from "../data/jobs";
 
 export default class JobListElement extends Component {
     render() {
-        const { title, company, location, salary} = this.props;
+        const { items, itemElement : Item} = this.props;
         return (
             <a href="#" className="job-item">
                 <div>
-                    <h2 className="job-item_title"> {title} </h2>
-                    <p class="job_info">
-                        {company} | {location} | {salary}
-                    </p>
+                    {jobs.map( item =>
+                        <Item
+                            {...item}
+                            key = {item.id}/> )}
                 </div>
             </a>
         );
