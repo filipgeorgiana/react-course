@@ -2,23 +2,22 @@ import React from 'react';
 import JobList from '../components/JobList';
 import SubtleErrorBox from '../components/SubtleErrorBox';
 import Spinner from '../components/Spinner';
+import List from "../components/List";
+import jobs from "../data/jobs";
+import JobListElement from "../components/JobListElement";
 // import JobsAPI from '../api/JobsAPI';
 
 export default class JobListPage extends React.Component {
     state = {
-        jobs: [],
+        jobs: jobs,
         loading: false,
     };
 
-    componentDidMount = async () => {
-        await this.loadJobList();
-    };
-
-    componentDidUpdate = async (prevProps) => {
-        if (prevProps.location.search !== this.props.location.search) {
-            await this.loadJobList();
-        }
-    };
+    // componentDidMount = async () => {
+    //     this.setState({loading: true});
+    //     // const jobs =  jobs;
+    //     this.setState({jobs, loading: false});
+    // };
 
     // loadJobList = async () => {
     //     this.setState({ loading: true });
@@ -39,16 +38,6 @@ export default class JobListPage extends React.Component {
     // };
 
     render() {
-        if (this.state.loading) {
-            return (
-                <Spinner />
-            );
-        }
-        if (this.state.error) {
-            return (
-                <SubtleErrorBox label={this.state.error} />
-            );
-        }
         return (
             <JobList jobs={this.state.jobs} />
         );

@@ -8,7 +8,7 @@ import RouterPlayground from "./RouterPlayground";
 
 ReactDOM.render(
   <React.StrictMode>
-    <RouterPlayground />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
