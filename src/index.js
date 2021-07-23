@@ -4,10 +4,11 @@ import './index.css';
 import App from './App';
 import StyledComponents from "./StyledComponents";
 import reportWebVitals from './reportWebVitals';
+import RouterPlayground from "./RouterPlayground";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <RouterPlayground />
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -6,6 +6,8 @@ import {SecondaryButton} from "./components/Button";
 import {ThemeProvider} from "styled-components";
 import theme from "./theme";
 import Navigation from "./components/Navigation";
+import JobListPage from "./containers/JobListPage";
+
 function App() {
   return (
       <ThemeProvider theme={theme}>
